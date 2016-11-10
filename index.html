@@ -2,27 +2,51 @@
 <html>
 	<head>
 	<meta charset="utf-8">
-		<title></title>
+		<title>GPALM</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 	</head>
-	<body>
+	<body id="home" data-spy="scroll" data-target=".navbar">
 
 		<!-- navbar -->
-		<nav class="navbar navbar-dark bg-primary">
+		<nav class="navbar navbar-dark bg-primary navbar-fixed-top">
 			<div class="container">
-			  <div class="nav navbar-nav">
-			    <a class="nav-item nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-			    <a class="nav-item nav-link" href="#about">About</a>
-			    <a class="nav-item nav-link" href="#speakers">Speakers</a>
-			    <a class="nav-item nav-link" href="#schedule">Schedule</a>
-			  </div>
+				  <ul class="nav navbar-nav">
+
+				  	<li class="nav-item">
+						<a class="nav-link" href="#home">Home<span class="sr-only">(current)</span></a>
+				  	</li>
+				  	<li class="nav-item">
+				    	<a class="nav-link" href="#about">About</a>
+				    </li>
+				    <li class="nav-item">
+				    	<a class="nav-link" href="#speakers">Speakers</a>
+				    </li>
+				    <li class="nav-item">
+				    	<a class="nav-link" href="#schedule">Schedule</a>
+				  	</li>
+				  </div>
 			  	<a class="navbar-brand float-sm-right mr-0 hidden-xs-down" href="https://github.com/larrypalm">Presented by Larry</a>
 			  </div>
-		</nav>
+		</nav> <!-- /navbar -->
+
+		<!-- jumbotron -->
+			<div class="jumbotron jumbotron-fluid">
+			  	<div class="container text-sm-center pt-3">
+			    	<h1 class="display-2">Full Stack Conf</h1>
+			    	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua.</p>
+
+					<!-- callout buttons -->
+					<div class="btn-group mt-2" role="group" aria-label="Basic example">
+					  	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Register now</button>
+					  	<a class="btn btn-secondary btn-lg" href="#speakers">See Speakers</a>
+					</div><!-- /callout buttons -->		
+			  	</div>
+			</div><!-- /jumbotron -->
 
 		<div class="container pt-2">
 		<!-- about section -->
-		  <div class="row">
+		  <div id="about" class="row">
 			<div class="col-md-4 col-lg-4">
 				<h3 class="mb-2">About Full Stack Conf</h3>
 				<img class="bm-1 img-fluid img-thumbnail hidden-xs-down"src="img/pdx.jpg" alt="Portland">
@@ -37,47 +61,189 @@
 			</div>
 			<div class="col-md-4 col-lg-4">
 				<h3 class="mb-2">What You'll Learn</h3>
-				<ul>
-					<li><strong>MongoDB</strong>: NoSQL database</li>
-					<li><strong>Angular</strong>: JavaScript framework</li>
-					<li><strong>Express</strong>: Framework for Node</li>
-					<li><strong>Node.js</strong>: JavaScript environment</li>
-					<li><strong>ES2015</strong>: Latest version of JavaScript</li>
-					<li><strong>Babel</strong>: JavaScript compiler</li>
+				<ul class="list-group">
+					<li class="list-group-item"><strong>MongoDB</strong>: NoSQL database</li>
+					<li class="list-group-item"><strong>Angular</strong>: JavaScript framework</li>
+					<li class="list-group-item"><strong>Express</strong>: Framework for Node</li>
+					<li class="list-group-item"><strong>Node.js</strong>: JavaScript environment</li>
+					<li class="list-group-item"><strong>ES2015</strong>: Latest version of JavaScript</li>
+					<li class="list-group-item"><strong>Babel</strong>: JavaScript compiler</li>
 		      </ul>
 			</div>
 		  </div> <!-- /about section -->
 		  
-		<!-- Speakers-->
-			<h1 class="display-3 text-xs-center my-3 text-muted">Speakers</h1>
-			  
-			<!--schedule -->
-			<h1 class="display-3 text-xs-center my-3 text-muted">Schedule</h1>
+			<!-- Speakers-->
+			<h1 id="speakers" class="display-3 text-xs-center my-3 text-muted">Speakers</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/angie.png" alt="Card image cap">
+						  	<div class="card-block">
+						    	<h4 class="card-title">Angie</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/nodestradamus.png" alt="nodestradamus">
+						  	<div class="card-block">
+							   	<h4 class="card-title">Nodestradamus</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/ecma.png" alt="Card image cap">
+						  	<div class="card-block">
+						    	<h4 class="card-title">Ecma</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/jay.png" alt="Card image cap">
+						  	<div class="card-block">
+						    	<h4 class="card-title">Jay Query</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/geo.png" alt="Card image cap">
+						  	<div class="card-block">
+						    	<h4 class="card-title">Geo "Lo" Cation</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="card">
+						  	<img class="card-img-top img-fluid" src="img/json.png" alt="Card image cap">
+						  	<div class="card-block">
+						    	<h4 class="card-title">Json Babel</h4>
+						    	<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
+						    	<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Speakers-->
 
+			<!--schedule -->
+			<h1 id="schedule"class="display-3 text-xs-center my-3 text-muted">Schedule</h1>
+			<ul class="list-group">
+			  <li class="list-group-item list-group-item-action">
+			  	<h3 class="list-group-item-heading">Keynote:</h3>
+			    <span class="tag tag-info tag-pill float-xs-right">08:00</span>
+			    blablabla
+			  </li>
+			  <li class="list-group-item list-group-item-action">
+			  	<h3 class="list-group-item-heading">Keynote:</h3>
+			    <span class="tag tag-default tag-pill float-xs-right">08:00</span>
+			    blablabla
+			  </li>
+			  <li class="list-group-item list-group-item-action">
+			  	<h3 class="list-group-item-heading">Keynote:</h3>
+			    <span class="tag tag-default tag-pill float-xs-right">08:00</span>
+			    blablabla
+			  </li>
+			  <li class="list-group-item list-group-item-action list-group-item-success">
+			  	<h3 class="list-group-item-heading">Lunch</h3>
+			    <span class="tag tag-default tag-pill float-xs-right">12:00</span>
+			    blablabla
+			  </li>			  
+			</ul>
+			<!--/schedule -->
+
+			<button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-3 " data-toggle="modal" data-target="#myModal">Sign up now!</button>
+			
 			<hr>
 			<div class="row py-2 text-muted">
 				<div class="col-md-6 col-xl-5">
 					<p><strong>About Gustav</strong></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. </p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod	tempor incididunt ut labore et dolore magna aliqua.</p>
 				</div>
 				<div class="col-md-6 col-xl-5 offset-xl-2">
 					<p><strong>Stay up-to-date on Gustav</strong></p>
 					<div class="input-group">
 						<input type="text" class="form-control" placeholder="Email">
 						<span class="input-group-btn">
-							<button class="btn btn-primary" type="button">Sign up</button>
+							<button class="btn btn-primary" type="button" >Sign up</button>
 						</span>
 					</div>
 				</div>
 			</div>
 
 			</hr>
+			
+			<!-- footer -->
+			<div class="row py-1">
+				<div class="col-md-7">
+					<ul class="nav nav-inline">
+					  	<li class="nav-item">
+					    	<a class="nav-link active" href="#">Community</a>
+					  	</li>
+					  	<li class="nav-item">
+					   	 	<a class="nav-link" href="#">Tracks</a>
+					  	</li>
+					  	<li class="nav-item">
+							<div class="btn-group dropup">
+							  	<button type="button" class="btn btn-secondary">
+							    	Split dropup
+							  	</button>
+							  	<button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							    <span class="sr-only">Toggle Dropdown</span>
+							  	</button>
+							  	<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">						    
+							    	<a class="dropdown-item" href="#">Item1</a>
+							    	<a class="dropdown-item" href="#">Item2</a>
+							    	<a class="dropdown-item" href="#">Item3</a>
+							    	<a class="dropdown-item" href="#">Item4</a>	    	
+							  	</div>
+							</div>
+					  	</li>
+					</ul>				
+				</div>
+				<div class="col-md-5 text-md-right">
+					<small>&copy; 2016 Gustav Palm &amp; Larry</small>
+				</div>
+			</div>
+			<!-- /footer -->
+		</div>		
 
-		</div>	
-		
-		
-	
+		<!--=================================
+			MODAL
+		==================================-->
+		<div class="modal fade" id="myModal" >
+		  <div class="modal-dialog modal-lg" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		        <h4 class="modal-title">Register for Full Stack Conf</h4>
+		      </div>
+		      <div class="modal-body">
+		        <p>One fine body&hellip;</p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->		
 	
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js" integrity="sha384-XTs3FgkjiBgo8qjEjBk0tGmf3wPrWtA6coPfQDfFEY8AnYJwjalXCiosYRBIBZX8" crossorigin="anonymous"></script>
